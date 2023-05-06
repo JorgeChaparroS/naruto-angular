@@ -1,0 +1,14 @@
+@import "../styles.scss";
+
+.content-page {
+    min-height: 83vh;
+    padding-top: 70px;
+    @media (min-width: $min-width-tablet) {
+        min-height: 88vh;
+        padding-top: 90px;
+    }
+    @media (min-width: $min-width-desktop) {
+        min-height: 90vh;
+        padding-top: 110px;
+    }
+}

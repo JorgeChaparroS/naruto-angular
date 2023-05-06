@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+This is an Angular project which uses some of the main tools for this framework, such as: 
+    -Angular components
+    -Angular services
+    -Angular routing
+    -Angular modules
+    -Lazy loading
+    -Reactive forms
+    -API calling with the HttpModule: 
+        - https://naruto-api.fly.dev/api/v1/characters
+        - https://naruto-api.fly.dev/api/v1/clans
+
+Other tools for front end development were use, such as: 
+    -Bootstrap
+    -CSS preprocessors
+    -Internationalization
+    -Unit testing
