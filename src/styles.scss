@@ -2,8 +2,8 @@
 $black: black;
 $white: rgb(245, 236, 236);
 
-$min-width-tablet: 576px;
-$min-width-desktop: 768px;
+$min-width-tablet: 768px;
+$min-width-desktop: 1200px;
 
 /* Fonts */
 @font-face {
@@ -14,6 +14,11 @@ $min-width-desktop: 768px;
 @font-face {
     font-family: 'TextFont';
     src: url('./assets/ShadowsIntoLight-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'SubtitleFont';
+    src: url('./assets/IndieFlower-Regular.ttf')
 }
 
 /* Tag standarization */
@@ -30,7 +35,19 @@ h1 {
     }
 }
 
-span, .text {
+h3 {
+    margin: 0 !important;
+    font-family: 'SubtitleFont';
+    font-size: 20px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 35px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 45px;
+    }
+}
+
+span, p, .text {
     color: $black;
     font-family: 'TextFont';
 }
@@ -49,4 +66,12 @@ span, .text {
 
 .pointer {
     cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.background-general {
+    background-color: whitesmoke;
 }

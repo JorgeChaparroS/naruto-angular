@@ -3,6 +3,7 @@
 header {
     background-color: rgb(95, 95, 163);
     position: fixed;
+    z-index: 1;
     img {
         max-width: 60px;
         @media (min-width: $min-width-tablet) {

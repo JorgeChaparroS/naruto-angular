@@ -1,0 +1,16 @@
+<div class="w-100 row flex-column align-items-center card mx-0 px-0 py-3 py-md-4">
+    <section class="row px-0 justify-content-end container-decorator mb-2 mb-md-3">
+        <span class="col-2 px-0 bg-{{ cardFor !== 'clans' ? 'info' : 'warning' }}"></span>
+    </section>
+    <img *ngIf="cardImageUrl" [src]="cardImageUrl" class="col-8 mb-2 mb-md-3 px-0 border-{{ cardFor !== 'clans' ? 'info' : 'warning' }}">
+    <h3 *ngIf="cardTile" class="text-center bold">{{ cardTile }}</h3>
+    <p *ngIf="cardDescription" class="mb-2 mb-md-3 text-center text">{{ cardDescription }}</p>
+    <section class="row justify-content-center">
+        <app-button 
+            class="col-6 col-md-5 col-xl-3"
+            [buttonLabel]="'Descubrir'"
+            [buttonClass]="cardFor !== 'clans' ? 'info' : 'warning'"
+            (onClicked)="buttonClicked(cardFor)">
+        </app-button>
+    </section>
+</div>
