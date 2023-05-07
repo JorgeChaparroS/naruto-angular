@@ -13,3 +13,16 @@ export class Constants {
         CHARACTER: '/characters'
     };
 }
+
+
+export interface ClanType {
+    link: string;
+    icon: string;
+    name: string;
+    id: number;
+};
+
+export interface CharacterType {
+    about: string[];
+    info: any
+};
