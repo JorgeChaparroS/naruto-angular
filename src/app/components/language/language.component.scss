@@ -1,0 +1,41 @@
+@import "../../../styles.scss";
+
+.language-selector-container {
+    border-radius: 20px;
+    position: relative;
+    @media (max-width: $min-width-desktop) {
+        height: 30px;
+    }
+    @media (max-width: $min-width-tablet) {
+        height: 20px;
+    }
+
+    i {
+        font-size: 16px;
+        @media (min-width: $min-width-tablet) {
+            font-size: 20px;
+        }
+        @media (min-width: $min-width-desktop) {
+            font-size: 24px;
+        }
+    }
+
+    .option {
+        position: absolute;
+        z-index: 2;
+        border-radius: 20px;
+        top: -20px;
+    }
+
+    p {
+        background-color: $white;
+    }
+
+    .radius-top {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .radius-bottom {
+        border-radius: 0 0 20px 20px;
+    }
+}

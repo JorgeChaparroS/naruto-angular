@@ -1,0 +1,20 @@
+{
+    "mainPage": {
+        "clansCard": {
+            "title": "Clans",
+            "description": "There are a lot of clans within NarutoVerse"
+        },
+        "charactersCard": {
+            "title": "Characters",
+            "description": "Get information about anyone within NarutoVerse"
+        },
+        "button": "Let's go"
+    },
+    "header": "Naruto Wiki",
+    "footer": {
+        "about": "About this project",
+        "author": "About the author",
+        "copyRight": "CopyRight"
+    },
+    "loader": "Loading..."
+}

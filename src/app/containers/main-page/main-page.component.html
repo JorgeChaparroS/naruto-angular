@@ -3,8 +3,8 @@
         <app-card-main-page 
             [cardImageUrl]="'https://qph.cf2.quoracdn.net/main-qimg-c9489a8c8ac8fb654deb3d495910200c-lq'"
             [cardFor]="'clans'"
-            [cardTile]="'Clanes'"
-            [cardDescription]="'¡Existe una gran cantidad de clanes en la franquicia de Naruto!'"
+            [cardTile]="'mainPage.clansCard.title' | translate"
+            cardDescription="¡{{ 'mainPage.clansCard.description' | translate }}!"
             (onGoToPage)="goToPage($event)">
         </app-card-main-page>
     </div>
@@ -12,8 +12,8 @@
         <app-card-main-page 
             [cardImageUrl]="'https://wallpapers.com/images/featured/peo1d7c1aqugno3e.jpg'"
             [cardFor]="'characters'"
-            [cardTile]="'Personajes'"
-            [cardDescription]="'¡Obtén información sobre los personajes de la franquicia!'"
+            [cardTile]="'mainPage.charactersCard.title' | translate"
+            cardDescription="¡{{ 'mainPage.charactersCard.description' | translate }}!"
             (onGoToPage)="goToPage($event)">
         </app-card-main-page>
     </div>

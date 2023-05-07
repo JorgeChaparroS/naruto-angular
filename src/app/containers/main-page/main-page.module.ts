@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page.component';
 import { MainPageRoutingModule } from './main-page-routing.module';
 import { CardMainPageComponent } from '../../components/card-main-page/card-main-page.component';
 import { ButtonModule } from '../../components/button/button.module';
+import { TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { ButtonModule } from '../../components/button/button.module';
   imports: [
     CommonModule,
     MainPageRoutingModule,
-    ButtonModule
+    ButtonModule,
+    TranslateModule
   ]
 })
+
 export class MainPageModule { }

@@ -1,6 +1,13 @@
 <header class="row mx-0 align-items-center w-100">
-    <section class="col-4 col-md-6">
+    <aside class="col-4 col-md-6">
         <img [src]="imageHeaderUrl" class="pointer" (click)="goToMainPage()">
-    </section>
-    <h1 class="col-8 col-md-6">Naruto Wiki</h1>
+    </aside>
+    <aside class="col-8 col-md-6">
+        <div class="row justify-content-end justify-content-xl-between align-items-center">
+            <h1 class="col-12 col-xl-8">{{ 'header' | translate }}</h1>
+            <section class="col-5 col-md-4 col-xl-2 mt-4 mt-xl-0">
+                <app-language></app-language>
+            </section>
+        </div>
+    </aside>
 </header>

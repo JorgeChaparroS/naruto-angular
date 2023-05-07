@@ -15,5 +15,8 @@ header {
     }
     h1 {
         color: $white;
+        @media (max-width: $min-width-desktop) {
+            text-align: right;
+        }
     }
 }

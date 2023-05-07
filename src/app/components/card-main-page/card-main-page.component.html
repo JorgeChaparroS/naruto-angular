@@ -8,7 +8,7 @@
     <section class="row justify-content-center">
         <app-button 
             class="col-6 col-md-5 col-xl-3"
-            [buttonLabel]="'Descubrir'"
+            [buttonLabel]="'mainPage.button' | translate"
             [buttonClass]="cardFor !== 'clans' ? 'info' : 'warning'"
             (onClicked)="buttonClicked(cardFor)">
         </app-button>
