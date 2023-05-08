@@ -75,3 +75,16 @@ span, p, .text {
 .background-general {
     background-color: whitesmoke;
 }
+
+.content-page-container {
+    min-height: 83vh;
+    padding-top: 100px;
+    @media (min-width: $min-width-tablet) {
+        min-height: 88vh;
+        padding-top: 90px;
+    }
+    @media (min-width: $min-width-desktop) {
+        min-height: 90vh;
+        padding-top: 110px;
+    }
+}

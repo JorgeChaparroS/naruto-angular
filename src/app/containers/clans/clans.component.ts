@@ -23,7 +23,6 @@ export class ClansComponent implements OnInit {
   getClans(): void {
     this.appService.getClansFromApi().subscribe({
       next: (response: ClanType[]) => {
-        console.log("Responseeee", response);
         this.appService.setClans(response);
       },
       error: (error: any) => {
