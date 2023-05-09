@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ModalComponent } from './components/modal/modal.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoadingInterceptor } from './shared/interceptor/loading.interceptor';
 import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageComponent } from './components/language/language.component';
+import { AlertModule } from './components/alert/alert.module';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -21,7 +21,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ModalComponent,
     LoaderComponent,
     LanguageComponent
   ],
@@ -29,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    AlertModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,0 +1,10 @@
+<div *ngIf="!(!enableNextPage && currentPage === 0)" 
+    class="paginator-container d-flex justify-content-end align-items-center p-2">
+    <button class="btn btn-light {{ currentPage === 0 ? 'd-none' : '' }}" (click)="prevPage()">
+        <i class="fa fa-angle-left mx-2"></i>
+    </button>
+    <span class="text px-3">{{ currentPage + 1 }}</span>
+    <button class="btn btn-light {{ enableNextPage ? '' : 'd-none' }}" (click)="nextPage()">
+        <i class="fa fa-angle-right mx-2"></i>
+    </button>
+</div>

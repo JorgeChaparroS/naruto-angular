@@ -16,5 +16,15 @@
         "author": "About the author",
         "copyRight": "CopyRight"
     },
-    "loader": "Loading..."
+    "loader": "Loading...",
+    "clansPage": {
+        "column1": "Symbol",
+        "column2": "Name",
+        "column3": "Info",
+        "link": "Check detailed information for"
+    },
+    "modalError": {
+        "title": "¡Error!",
+        "description": "We are sorry. An unexpected error is happened. Please try again or call 3214876038 for more information."
+    }
 }

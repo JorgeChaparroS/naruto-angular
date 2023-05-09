@@ -1,6 +1,8 @@
 /* Variables */
 $black: black;
-$white: rgb(245, 236, 236);
+$white: white;
+$gray: #CCCCCC;
+$red: red;
 
 $min-width-tablet: 768px;
 $min-width-desktop: 1200px;
@@ -35,7 +37,19 @@ h1 {
     }
 }
 
-h3 {
+h2 {
+    margin: 0 !important;
+    font-family: 'TitleFont';
+    font-size: 20px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 35px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 45px;
+    }
+}
+
+h3, .h3 {
     margin: 0 !important;
     font-family: 'SubtitleFont';
     font-size: 20px;
@@ -44,6 +58,18 @@ h3 {
     }
     @media (min-width: $min-width-desktop) {
         font-size: 45px;
+    }
+}
+
+h5, .h5 {
+    margin: 0 !important;
+    font-family: 'SubtitleFont';
+    font-size: 18px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 22px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 26px;
     }
 }
 
@@ -81,7 +107,7 @@ span, p, .text {
     padding-top: 100px;
     @media (min-width: $min-width-tablet) {
         min-height: 88vh;
-        padding-top: 90px;
+        padding-top: 140px;
     }
     @media (min-width: $min-width-desktop) {
         min-height: 90vh;

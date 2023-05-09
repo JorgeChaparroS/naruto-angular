@@ -16,5 +16,15 @@
         "author": "Sobre el autor",
         "copyRight": "Derechos Reservados"
     },
-    "loader": "Cargando..."
+    "loader": "Cargando...",
+    "clansPage": {
+        "column1": "Símbolo",
+        "column2": "Nombre",
+        "column3": "Información",
+        "link": "Ver información detallada"
+    },
+    "modalError": {
+        "title": "¡Error!",
+        "description": "Lo sentimos. Ha ocurrido un error inesperado, por favor vuelve a intentarlo o llama al 3214876038 para más información."
+    }
 }

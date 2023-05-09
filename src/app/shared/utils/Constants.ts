@@ -12,6 +12,10 @@ export class Constants {
         CLAN: '/clans',
         CHARACTER: '/characters'
     };
+
+    static readonly COMPONENTS = {
+        MODAL_ERROR_ID: 'alert-error'
+    };
 }
 
 
