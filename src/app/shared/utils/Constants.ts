@@ -28,5 +28,8 @@ export interface ClanType {
 
 export interface CharacterType {
     about: string[];
-    info: any
+    info: any;
+    id: number;
+    name: string;
+    images: string[];
 };

@@ -24,6 +24,10 @@
         "link": "Ver información detallada",
         "input": "Busca por nombre"
     },
+    "charactersPage": {
+        "detail": "Ver información",
+        "input": "Busca por nombre u apellido"
+    },
     "modalError": {
         "title": "¡Error!",
         "description": "Lo sentimos. Ha ocurrido un error inesperado, por favor vuelve a intentarlo o llama al 3214876038 para más información."

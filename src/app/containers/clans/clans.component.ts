@@ -36,7 +36,7 @@ export class ClansComponent implements OnInit {
 
   subscribeToFormChanges(): void {
     this.searchForm.valueChanges.subscribe((val: any) => {
-      this.filterByName(val.name)
+      this.filterByName(val.name);
     });
   }
 

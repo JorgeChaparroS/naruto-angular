@@ -16,8 +16,8 @@ export class AppService {
     return this.http.get<ClanType[]>(Constants.API + Constants.API_PATH.CLAN);
   }
 
-  getCharactersFromApi(offset: number, sort: boolean): Observable<CharacterType[]> {
-    return this.http.get<CharacterType[]>(Constants.API + Constants.API_PATH.CHARACTER + `?limit=10&offset=${offset}${sort ? '&sort=true' : ''}`);
+  getCharactersFromApi(offset: number, sort: boolean, name: string): Observable<CharacterType[]> {
+    return this.http.get<CharacterType[]>(Constants.API + Constants.API_PATH.CHARACTER + `?limit=6&offset=${offset}${sort ? '&sort=true' : ''}${name ? `&name=${name}` : ''}`);
   }
 
   setClans(clans: ClanType[]): void {
