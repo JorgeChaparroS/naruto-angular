@@ -21,7 +21,8 @@
         "column1": "Símbolo",
         "column2": "Nombre",
         "column3": "Información",
-        "link": "Ver información detallada"
+        "link": "Ver información detallada",
+        "input": "Busca por nombre"
     },
     "modalError": {
         "title": "¡Error!",

@@ -10,7 +10,7 @@ export class PaginatorComponent {
   @Input() enableNextPage = true;
   @Output() onPagination = new EventEmitter();
 
-  currentPage = 0;
+  @Input() currentPage = 0;
   
   nextPage(): void {
     this.currentPage++;

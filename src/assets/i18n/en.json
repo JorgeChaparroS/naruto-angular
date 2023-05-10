@@ -21,7 +21,8 @@
         "column1": "Symbol",
         "column2": "Name",
         "column3": "Info",
-        "link": "Check detailed information for"
+        "link": "Check detailed information for",
+        "input": "Search by name"
     },
     "modalError": {
         "title": "¡Error!",

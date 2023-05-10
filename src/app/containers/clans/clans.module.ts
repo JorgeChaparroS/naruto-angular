@@ -4,6 +4,8 @@ import { ClansComponent } from './clans.component';
 import { ClansRoutingModule } from './clans-routing.module';
 import { TranslateModule} from '@ngx-translate/core';
 import { PaginatorModule } from '../../components/paginator/paginator.module';
+import { InputModule } from '../../components/input/input.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ClansComponent],
@@ -11,7 +13,9 @@ import { PaginatorModule } from '../../components/paginator/paginator.module';
     CommonModule,
     ClansRoutingModule,
     TranslateModule,
-    PaginatorModule
+    PaginatorModule,
+    InputModule,
+    ReactiveFormsModule
   ]
 })
 export class ClansModule { }
