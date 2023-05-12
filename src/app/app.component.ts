@@ -9,7 +9,7 @@ import { Constants } from './shared/utils/Constants';
 })
 export class AppComponent {
 
-  modalErrorId = Constants.COMPONENTS.MODAL_ERROR_ID;
+  modalErrorId = Constants.COMPONENTS.ALERT_ERROR_ID;
   
   constructor(private readonly translate: TranslateService) {
     this.translate.setDefaultLang('en');

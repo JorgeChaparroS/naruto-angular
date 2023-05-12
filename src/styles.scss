@@ -88,6 +88,16 @@ span, p, .text {
     }
 }
 
+.small-text {
+    font-size: 14px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 16px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 18px;
+    }
+}
+
 /* classes */
 
 .pointer {

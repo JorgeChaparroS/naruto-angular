@@ -9,9 +9,15 @@
         </app-input>
         <app-button 
             class="col-6 col-md-3 col-xl-2"
-            [buttonLabel]="'charactersPage.detail' | translate"
+            [buttonLabel]="'charactersPage.search' | translate"
             [buttonClass]="'warning'"
             (onClicked)="buttonClicked()">
+        </app-button>
+        <app-button 
+            class="col-8 col-md-5 col-xl-3 mt-3 mt-xl-0"
+            [buttonLabel]="(sort ? 'charactersPage.orderByName' : 'charactersPage.orderByTop') | translate"
+            [buttonClass]="sort ? 'outline-danger' : 'outline-info'"
+            (onClicked)="changeSorting()">
         </app-button>
     </form>
 
@@ -22,9 +28,45 @@
             (onCheckDetail)="onCheckDetail($event)"></app-card-character>
     </div>
     
-    <app-paginator 
+    <app-paginator *ngIf="characters?.length"
         [currentPage]="currentPage"
         [enableNextPage]="enableNextPage"
         (onPagination)="onPagination($event)">
     </app-paginator>
 </section>
+
+<app-alert [id]="modalCharacterId" [sizeInCols]="'col-10 col-xl-8'">
+    <article class="d-flex flex-column align-items-center">
+        <h5 class="bold text-center">{{ characterSelected?.name }}</h5>
+        <section *ngIf="characterSelected?.images?.length"
+            class="d-flex flex-row w-100 justify-content-between justify-content-md-center align-items-center mt-3">
+            <button class="btn btn-{{ indexImageCharacter === 0 ? 'secondary' : 'success' }}" 
+                [disabled]="indexImageCharacter === 0"
+                (click)="onChangeImage('decrease')" >
+                <i class="fa fa-angle-left mx-2"></i>
+            </button>
+            <img [src]="characterSelected?.images?.[indexImageCharacter]" class="mx-1 mx-md-3">
+            <button class="btn btn-{{ indexImageCharacter === ((characterSelected?.images?.length || 1) - 1) ? 'secondary' : 'success' }}" 
+                [disabled]="indexImageCharacter === ((characterSelected?.images?.length || 1) - 1)"
+                (click)="onChangeImage('increase')">
+                <i class="fa fa-angle-right mx-2"></i>
+            </button>
+        </section>
+        <p *ngIf="characterSelected?.page" class="text">
+            <a [href]="characterSelected?.page" target=”_blank”>{{ 'charactersPage.fanPage' | translate }}</a>
+        </p>
+        <section *ngIf="infoKeys?.length" class="row flex-row px-4 my-3">
+            <div *ngFor="let key of infoKeys" class="col-12 col-md-6 col-xl-4 mb-3">
+                <span class="small-text">{{key}}:</span>
+                <p class="text bold m-0">{{characterSelected?.info?.[key]}}</p>
+            </div>
+        </section>
+        <section class="row w-100 justify-content-center">
+            <app-button class="col-8 col-md-4 col-xl-3"
+                buttonLabel="¡{{'charactersPage.buttonModal' | translate}}!" 
+                [buttonClass]="'success'"
+                (onClicked)="closeDetail()">
+            </app-button>
+        </section>
+    </article>
+</app-alert>

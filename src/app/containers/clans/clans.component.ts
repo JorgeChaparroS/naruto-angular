@@ -56,7 +56,7 @@ export class ClansComponent implements OnInit {
         this.clansPaginated = this.generatePaginationRecords(0);
       },
       error: () => {
-        this.alertService.open(Constants.COMPONENTS.MODAL_ERROR_ID);
+        this.alertService.open(Constants.COMPONENTS.ALERT_ERROR_ID);
       }
     });
   }

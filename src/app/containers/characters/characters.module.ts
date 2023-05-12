@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputModule } from '../../components/input/input.module';
 import { PaginatorModule } from '../../components/paginator/paginator.module';
+import { AlertModule } from '../../components/alert/alert.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PaginatorModule } from '../../components/paginator/paginator.module';
     TranslateModule,
     ReactiveFormsModule,
     InputModule,
-    PaginatorModule
+    PaginatorModule,
+    AlertModule
   ]
 })
 export class CharactersModule { }

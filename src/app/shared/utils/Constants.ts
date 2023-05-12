@@ -14,7 +14,8 @@ export class Constants {
     };
 
     static readonly COMPONENTS = {
-        MODAL_ERROR_ID: 'alert-error'
+        ALERT_ERROR_ID: 'alert-error',
+        ALERT_CHARACTER_DETAIL: 'alert-character-info'
     };
 }
 
@@ -32,4 +33,5 @@ export interface CharacterType {
     id: number;
     name: string;
     images: string[];
+    page: string;
 };

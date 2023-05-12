@@ -26,7 +26,12 @@
     },
     "charactersPage": {
         "detail": "Get info",
-        "input": "Search by name or lastname"
+        "input": "Search by name or lastname",
+        "buttonModal": "Got It",
+        "orderByName": "Order by Name",
+        "orderByTop": "Most populars",
+        "search": "Search",
+        "fanPage": "Go to fan page"
     },
     "modalError": {
         "title": "¡Error!",

@@ -26,7 +26,12 @@
     },
     "charactersPage": {
         "detail": "Ver información",
-        "input": "Busca por nombre u apellido"
+        "input": "Busca por nombre u apellido",
+        "buttonModal": "Entendido",
+        "orderByName": "Ordenar por nombre",
+        "orderByTop": "Más populares",
+        "search": "Buscar",
+        "fanPage": "Ir a la página de fans"
     },
     "modalError": {
         "title": "¡Error!",

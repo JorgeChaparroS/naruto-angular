@@ -19,6 +19,10 @@ export class CharactersComponent implements OnInit {
   searchForm: FormGroup = new FormGroup({
     name: new FormControl('', [])
   });
+  characterSelected: CharacterType | undefined;
+  infoKeys: string[] = [];
+  indexImageCharacter = 0;
+  modalCharacterId = Constants.COMPONENTS.ALERT_CHARACTER_DETAIL;
   
   constructor(private readonly appService: AppService,
     private readonly alertService: AlertService) {
@@ -32,8 +36,7 @@ export class CharactersComponent implements OnInit {
   subscribeToFormChanges(): void {
     this.searchForm.get('name')?.valueChanges.subscribe((name: string) => {
       if (!name.length) {
-        this.currentPage = 0;
-        this.offset = 0;
+        this.resetPagination();
         this.getCharacters();
       }
     });
@@ -48,19 +51,26 @@ export class CharactersComponent implements OnInit {
       },
       error: (error: any) => {
         if (error.status !== 404) {
-          this.alertService.open(Constants.COMPONENTS.MODAL_ERROR_ID);
+          this.alertService.open(Constants.COMPONENTS.ALERT_ERROR_ID);
         }
       }
     });
   }
 
   onCheckDetail(character: CharacterType): void {
-    
+    this.characterSelected = character;
+    this.indexImageCharacter = 0;
+    this.infoKeys = Object.keys(this.characterSelected?.info);
+    this.alertService.open(this.modalCharacterId);
+  }
+
+  onChangeImage(operation: string): void {
+    const valueToAdd = operation === 'increase' ? 1 : -1;
+    this.indexImageCharacter += valueToAdd;
   }
 
   buttonClicked(): void {
     if (this.searchForm.get('name')?.value) {
-      this.currentPage = 0;
       this.onPagination(0);
     }
   }
@@ -69,5 +79,20 @@ export class CharactersComponent implements OnInit {
     this.currentPage = page;
     this.offset = page * 6;
     this.getCharacters();
+  }
+
+  closeDetail(): void {
+    this.alertService.close(this.modalCharacterId);
+  }
+
+  changeSorting(): void {
+    this.sort = !this.sort;
+    this.resetPagination();
+    this.getCharacters();
+  }
+
+  resetPagination(): void {
+    this.currentPage = 0;
+    this.offset = 0;
   }
 }
