@@ -1,0 +1,53 @@
+@import "../../../styles.scss";
+main {
+    .cv-container {
+        border-radius: 50px;
+        background-color: $white;
+
+        img {
+            border: 2px solid $black;
+            width: 50%;
+            max-width: 200px;
+        }
+        h4 {
+            font-size: 24px;
+        }
+
+        h6 {
+            font-size: 20px;
+        }
+    
+        h4, h6, span, p, a, li {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .section-title {
+            background-color: dodgerblue;
+            box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid $white;
+        }
+
+        .dates-container, .dates-container-top, .dates-container-bottom, .dates-container-center {
+            background-color: $black;
+            span {
+                color: $white;
+            }
+        }
+
+        .dates-container {
+            border-radius: 50px;
+        }
+
+        .dates-container-top {
+            border-radius: 50px 50px 0px 0px;
+        }
+
+        .dates-container-bottom {
+            border-radius: 0px 0px 50px 50px;
+        }
+
+        .dates-container, .section-title {
+            color: $white;
+        }
+    }
+}
