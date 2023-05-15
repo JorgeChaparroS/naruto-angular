@@ -44,4 +44,3 @@ Other tools for front end development were use, such as:
     -CSS preprocessors
     -Internationalization
     -Unit testing
-    -Redux

@@ -1,8 +1,11 @@
 @import "../../../styles.scss";
 
+img {
+    border: 3px solid;
+}
+
 app-alert {
     img {
-        border: 3px solid;
         height: 250px;
         object-fit: cover;
         @media (max-width: $min-width-tablet) {

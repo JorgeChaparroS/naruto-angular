@@ -33,6 +33,12 @@
         [enableNextPage]="enableNextPage"
         (onPagination)="onPagination($event)">
     </app-paginator>
+
+    <article *ngIf="!characters?.length">
+        <img src="https://laverdadnoticias.com/export/sites/laverdad/img/2020/11/20/captura_de_pantalla_2020-11-20_a_laxsx_11_07_42.png_1740367483.png" alt="not_found"
+        class="w-100">
+        <p class="text bold mt-3 text-center">{{ 'charactersPage.notFound' | translate }}</p>
+    </article>
 </section>
 
 <app-alert [id]="modalCharacterId" [sizeInCols]="'col-10 col-xl-8'">
