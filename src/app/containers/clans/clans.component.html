@@ -1,0 +1,59 @@
+<section class="container mx-auto content-page-container">
+
+    <h2 class="d-none d-xl-block">{{ 'mainPage.clansCard.title' | translate }}</h2>
+
+    <ng-container *ngIf="clans">
+
+        <form [formGroup]="searchForm" class="row mt-3">
+            <app-input [placeholder]="'clansPage.input' | translate"
+                [formControlName]="'name'"
+                class="col-12 col-md-6 col-xl-4"></app-input>
+        </form>
+
+        <section class="shadowed mt-3">
+            <table class="w-100 d-none d-xl-table">
+                <tr class="table-header">
+                    <th class="p-4 w-20 h5">{{ 'clansPage.column1' | translate }}</th>
+                    <th class="p-4 w-30 h5">{{ 'clansPage.column2' | translate }}</th>
+                    <th class="p-4 w-50 h5">{{ 'clansPage.column3' | translate }}</th>
+                </tr>
+                <tr *ngFor="let clan of clansPaginated"
+                    class="table-row">
+                    <td class="p-3 w-20 text">
+                        <img *ngIf="clan.icon" [src]="clan.icon" class="image-icon">
+                    </td>
+                    <td class="p-3 w-30 text">{{ clan.name }}</td>
+                    <td class="p-3 w-50 text">
+                        <a [href]="clan.link" target=”_blank”>{{ 'clansPage.link' | translate }} {{ clan.name }}</a>
+                    </td>
+                </tr>
+            </table>
+        
+            <table class="w-100 d-xl-none">
+                <tr class="table-header">
+                    <th class="p-3 w-100 h5">{{ 'mainPage.clansCard.title' | translate }}</th>
+                </tr>
+                <tr *ngFor="let clan of clansPaginated"
+                    class="table-row w-100">
+                    <td class="p-3 row align-items-center">
+                        <aside class="col-3 col-md-2">
+                            <img *ngIf="clan.icon" [src]="clan.icon" class="image-icon">
+                        </aside>
+                        <aside class="col-9 col-md-10 text">
+                            <p class="mb-2">{{ clan.name }}</p>
+                            <a [href]="clan.link" target=”_blank”>{{ 'clansPage.link' | translate }} {{ clan.name }}</a>
+                        </aside>
+                    </td>
+                </tr>
+            </table>
+    
+            <app-paginator 
+                [currentPage]="currentPage"
+                [enableNextPage]="enableNextPage"
+                (onPagination)="onPagination($event)">
+            </app-paginator>
+    
+        </section>
+    </ng-container>
+    
+</section>

@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+.shadowed {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+    .table-header {
+        background-color: $black;
+        color: $white;
+    }
+    
+    .table-row {
+        background-color: $white;
+    }
+
+    tr {
+        border: 1px solid $gray;
+    }
+
+    .image-icon {
+        max-width: 40px;
+    }
+}

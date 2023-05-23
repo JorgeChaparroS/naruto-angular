@@ -1,0 +1,21 @@
+@import "../styles.scss";
+
+.content-page {
+    min-height: 83vh;
+    @media (min-width: $min-width-tablet) {
+        min-height: 88vh;
+    }
+    @media (min-width: $min-width-desktop) {
+        min-height: 90vh;
+    }
+}
+
+i {
+    font-size: 25px;
+    border-radius: 25px;
+    background-color: $red;
+}
+
+img {
+    max-width: 100px;
+}

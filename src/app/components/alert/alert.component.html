@@ -1,0 +1,8 @@
+<div [id]="id" class="app-modal row justify-content-center align-items-center">
+    <article class="app-modal-content pt-2 pb-4 px-3 px-xl-4 {{ sizeInCols }}">
+        <div class="d-flex justify-content-end">
+            <span class="close" (click)="closeAlert()">&times;</span>
+        </div>
+        <ng-content></ng-content>
+    </article>
+</div>

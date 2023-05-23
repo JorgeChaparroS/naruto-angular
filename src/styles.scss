@@ -1,0 +1,126 @@
+/* Variables */
+$black: black;
+$white: white;
+$gray: #CCCCCC;
+$red: red;
+
+$min-width-tablet: 768px;
+$min-width-desktop: 1200px;
+
+/* Fonts */
+@font-face {
+    font-family: 'TitleFont';
+    src: url('./assets/fonts/Sigmar-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'TextFont';
+    src: url('./assets/fonts/ShadowsIntoLight-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'SubtitleFont';
+    src: url('./assets/fonts/IndieFlower-Regular.ttf')
+}
+
+/* Tag standarization */
+
+h1 {
+    margin: 0 !important;
+    font-family: 'TitleFont';
+    font-size: 30px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 45px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 55px;
+    }
+}
+
+h2 {
+    margin: 0 !important;
+    font-family: 'TitleFont';
+    font-size: 20px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 35px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 45px;
+    }
+}
+
+h3, .h3 {
+    margin: 0 !important;
+    font-family: 'SubtitleFont';
+    font-size: 20px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 35px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 45px;
+    }
+}
+
+h5, .h5 {
+    margin: 0 !important;
+    font-family: 'SubtitleFont';
+    font-size: 18px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 22px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 26px;
+    }
+}
+
+span, p, .text {
+    color: $black;
+    font-family: 'TextFont';
+}
+
+.text {
+    font-size: 16px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 20px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 24px;
+    }
+}
+
+.small-text {
+    font-size: 14px;
+    @media (min-width: $min-width-tablet) {
+        font-size: 16px;
+    }
+    @media (min-width: $min-width-desktop) {
+        font-size: 18px;
+    }
+}
+
+/* classes */
+
+.pointer {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.background-general {
+    background-color: whitesmoke;
+}
+
+.content-page-container {
+    min-height: 83vh;
+    padding-top: 100px;
+    @media (min-width: $min-width-tablet) {
+        min-height: 88vh;
+        padding-top: 140px;
+    }
+    @media (min-width: $min-width-desktop) {
+        min-height: 90vh;
+        padding-top: 110px;
+    }
+}

@@ -1,0 +1,13 @@
+<div class="language-selector-container pointer">
+    <p *ngIf="!isExpanded" class="m-0 py-1 text-center option w-100" (click)="openSelector()">
+        <i class="fa fa-thin fa-language mx-2"></i>
+        <span class="text">{{ languageSelected | titlecase }}</span>
+    </p>
+    <div *ngIf="isExpanded" class="option w-100">
+        <p *ngFor="let language of languagesAvailable; let i = index" 
+        class="text m-0 text-center {{ i === languagesAvailable.length - 1 ? 'radius-bottom' : 'border-bottom' }} {{ i === 0 ? 'radius-top' : '' }}" 
+        (click)="onChangeLanguage(language)">
+            {{ language | titlecase }}
+        </p>
+    </div>
+</div>

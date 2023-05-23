@@ -1,0 +1,16 @@
+<app-header></app-header>
+<section class="background-general">
+    <section class="content-page">
+        <router-outlet></router-outlet>
+    </section>
+    <app-footer></app-footer>
+</section>
+<app-loader></app-loader>
+<app-alert [id]="modalErrorId">
+    <article class="d-flex flex-column align-items-center">
+        <i class="fa fa-ban p-2 mb-3"></i>
+        <h5 class="bold text-center">{{ 'modalError.title' | translate }}</h5>
+        <p class="text-center text py-3">{{ 'modalError.description' | translate }}</p>
+        <img src="https://freesvg.org/img/Arnoud999-Right-or-wrong-3.png">
+    </article>
+</app-alert>
