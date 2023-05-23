@@ -18,4 +18,11 @@ describe('AlertComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call the AlertService Close method', () => {
+    component.id = 'TestAlertId';
+    spyOn(component.alertService, 'close');
+    component.closeAlert();
+    expect(component.alertService.close).toHaveBeenCalledWith('TestAlertId');
+  });
 });

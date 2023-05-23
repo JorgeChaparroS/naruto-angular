@@ -18,4 +18,21 @@ describe('PaginatorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should change to next page and emit new value', () => {
+    component.currentPage = 0;
+    spyOn(component.onPagination, 'emit');
+    component.nextPage();
+    expect(component.currentPage).toEqual(1);
+    expect(component.onPagination.emit).toHaveBeenCalledWith(1);
+  });
+
+  
+  it('should change to prev page and emit new value', () => {
+    component.currentPage = 1;
+    spyOn(component.onPagination, 'emit');
+    component.prevPage();
+    expect(component.currentPage).toEqual(0);
+    expect(component.onPagination.emit).toHaveBeenCalledWith(0);
+  });
 });

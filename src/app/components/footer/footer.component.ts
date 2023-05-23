@@ -9,7 +9,7 @@ import { Constants } from 'src/app/shared/utils/Constants';
 })
 export class FooterComponent {
 
-  constructor(private readonly router: Router){}
+  constructor(public router: Router){}
 
   onNavigateTo(route: string): void {
     const routeTo = route === 'about' ? Constants.ROUTES.ABOUT_PAGE : Constants.ROUTES.AUTHOR_PAGE;

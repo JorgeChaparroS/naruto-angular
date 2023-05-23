@@ -11,7 +11,7 @@ export class AlertComponent {
   @Input() sizeInCols = 'col-10 col-md-8 col-xl-6';
   @Input() id = '';
 
-  constructor(private readonly alertService: AlertService) {}
+  constructor(public alertService: AlertService) {}
 
   closeAlert(): void {
     this.alertService.close(this.id);

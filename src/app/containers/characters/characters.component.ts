@@ -24,8 +24,8 @@ export class CharactersComponent implements OnInit {
   indexImageCharacter = 0;
   modalCharacterId = Constants.COMPONENTS.ALERT_CHARACTER_DETAIL;
   
-  constructor(private readonly appService: AppService,
-    private readonly alertService: AlertService) {
+  constructor(public appService: AppService,
+    public alertService: AlertService) {
   }
 
   ngOnInit(): void {

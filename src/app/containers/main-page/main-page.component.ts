@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class MainPageComponent {
 
-  constructor(private readonly router: Router){}
+  constructor(public router: Router){}
 
   goToPage(route: string): void {
     this.router.navigate([route]);

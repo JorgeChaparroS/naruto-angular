@@ -12,7 +12,7 @@ export class LanguageComponent {
   languagesAvailable = ['en', 'es'];
   isExpanded = false;
 
-  constructor(private readonly translate: TranslateService) {
+  constructor(public translate: TranslateService) {
 
   }
 

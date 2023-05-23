@@ -20,8 +20,8 @@ export class ClansComponent implements OnInit {
     name: new FormControl('', [])
   });
 
-  constructor(private readonly appService: AppService,
-    private readonly alertService: AlertService) {
+  constructor(public appService: AppService,
+    public alertService: AlertService) {
   }
 
   ngOnInit(): void {
