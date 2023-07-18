@@ -15,3 +15,10 @@ Other tools for front end development were use, such as:
     -CSS preprocessors
     -Internationalization
     -Unit testing
+
+To run the project locally, just run the following commands: 
+
+1. npm i (make sure to have node installed)
+2. npm run start ('ng serve' also works)
+
+That's it. Enjoy!
