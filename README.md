@@ -21,4 +21,6 @@ To run the project locally, just run the following commands:
 1. npm i (make sure to have node installed)
 2. npm run start ('ng serve' also works)
 
+If you don not want to download, install and run the project locally, you can always visit it here: https://naruto-wiki-jorgechaparros-dev.netlify.app/main-page
+
 That's it. Enjoy!
